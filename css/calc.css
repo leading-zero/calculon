@@ -1,0 +1,276 @@
+// NOTE: You don't need to mess around with 
+// CSS to follow the tutorial. Focus on the 
+// JavaScript instead!
+// =========================
+
+// Some personal resets
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+/* Responsive Images */
+
+embed,
+iframe,
+img,
+object,
+video {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+p,
+pre,
+blockquote,
+figure,
+hr {
+  margin: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: block;
+}
+
+/* Removes all decimals and discs from lists */
+
+ol,
+ul {
+  list-style: none;
+}
+
+/* 
+ * Completely resets form items
+ * ----------------------------
+ * Super hard reset that removes all borders
+ * and radiuses of all form items (including
+ * checkboxes and radios)
+ */
+
+input,
+textarea,
+button {
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  outline: none;
+  appearance: none;
+  text-align: left;
+  max-width: 100%;
+}
+
+input:hover,
+input:active,
+input:focus,
+textarea:hover,
+textarea:active,
+textarea:focus,
+button:hover,
+button:active,
+button:focus {
+  outline: none;
+}
+
+:root {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+html {
+  font-size: 175%;
+  font-weight: 200;
+  line-height: 2;
+}
+
+body {
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.container {
+  max-width: 18em;
+}
+
+.container>p {
+  text-align: center;
+}
+
+.calculator {
+  border-radius: 10px;
+  box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.5);
+  line-height: 250%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  max-width: 40em;
+  overflow: hidden;
+}
+
+.calculator__display {
+  background-color: #222;
+  color: #fff;
+  font-size: 3em;
+  font-weight: 200;
+  padding: 0.25em 0.25em;
+  text-align: right;
+}
+
+.calculator__keys {
+  background-color: #222;
+  display: grid;
+  font-size: 1.2em;
+  grid-gap: 1px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: .3em;
+}
+
+.calculator__keys>* {
+  background-color: #fff;
+  padding: 0.5em 0.5em;
+  position: relative;
+  text-align: center;
+  border-radius: 50%;
+  margin: 1px 1px;
+}
+
+.calculator__keys>.key--0 {
+  padding-left: 1em;
+}
+
+.calculator__keys>*:active::before,
+.calculator__keys>.is-depressed::before {
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 50%;
+  bottom: 0;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, .5) inset;
+  content: '';
+  filter: invert(100%);
+  left: 0;
+  opacity: .75;
+  padding-top: .5em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.key--operator {
+  background-color: #ff7033;
+  color: #fff;
+  grid-column: -2;
+}
+
+.key--equal {
+  background-color: #ff7033;
+  color: #fff;
+  grid-column: -2;
+  grid-row: 5;
+}
+
+.key--clear {
+  background-color: #555;
+  color: #fff;
+  grid-row: 1;
+
+}
+
+.key-number-top {
+  background-color: #555;
+  color: #fff;
+  grid-row: 2;
+}
+
+.key-number-mid {
+  background-color: #555;
+  color: #fff;
+  grid-row: 3;
+}
+
+.key-number-bot {
+  background-color: #555;
+  color: #fff;
+  grid-row: 4;
+}
+
+.key--0 {
+  border-radius: 25px;
+  background-color: #555;
+  color: #fff;
+  grid-column: 1 / span 2;
+  grid-row: 5;
+  text-align: left;
+}
+
+.key--0>*:active::before,
+.key--0>.is-depressed::before {
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 25px;
+  bottom: 0;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, .5) inset;
+  content: '';
+  filter: invert(100%);
+  left: 0;
+  opacity: .75;
+  padding-top: .5em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.key--decimal {
+  background-color: #555;
+  color: #fff;
+  grid-column: 3;
+}
+
+.key--grey {
+  background-color: #aaa;
+}
+
+.key--mfcalc {
+  border-radius: 25px;
+  font-weight: 800;
+  grid-column: 2 / span 2;
+}
+
+.calculon {
+  height: 64px;
+}

@@ -1,0 +1,1 @@
+!function(){$(".input").click(function(){n($(this).html())});function n(n){const i=$("#disp");if("0"===i.html())i.html(n);else{var t=i.html();i.html(t+n)}}}();function ans(){c=eval(disp.innerHTML),disp.innerHTML=c}function clc(){disp.innerHTML="0"}
